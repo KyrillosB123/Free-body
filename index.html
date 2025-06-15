@@ -11,7 +11,8 @@
   <script>
     const canvas = document.createElement('canvas')
     canvas.width = 400
-    canvas.height = 400  
+    canvas.height = 400
+    document.body.appendChild(canvas)  // <--- Make canvas visible
 
     const ctx = canvas.getContext('2d')
 
@@ -19,7 +20,7 @@
     ctx.fillStyle = 'white'
     ctx.lineWidth = 2
 
-    ctx.strokeRect(50, 240, 300, 100) 
+    ctx.strokeRect(50, 240, 300, 100) // optional static rectangle
 
     function triangle(cx, cy) {
       ctx.beginPath()
@@ -41,8 +42,8 @@
 
     for (let x = 100; x <= 300; x += 50) {
       arrow(x, fixedY)
-      return canvas
     }
   </script>
 </body>
 </html>
+
