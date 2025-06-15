@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Simple Arrow Canvas</title>
+  <style>
+    body { background: black; }
+  </style>
+</head>
+<body>
+  <script>
+const canvas = document.createElement('canvas')
+canvas.width = 400
+canvas.height = 400
+
+const ctx = canvas.getContext('2d')
+
+ctx.strokeStyle = 'white'
+ctx.fillStyle = 'white'
+ctx.lineWidth = 2
+
+ctx.strokeRect(50,240,300,100)
+
+
+function triangle(cx, cy) {
+  ctx.beginPath()
+  ctx.moveTo(cx, cy - 15)            
+  ctx.lineTo(cx - 10, cy)           
+  ctx.lineTo(cx + 10, cy)            
+  ctx.closePath()
+  ctx.fill()
+  ctx.stroke()
+}
+
+function arrow(cx, cy) {
+  ctx.fillRect(cx - 10, cy, 20, 50)
+  ctx.strokeRect(cx - 10, cy, 20, 50)
+  
+  triangle(cx, cy)
+}
+
+const fixedY = 150;
+
+for (let x = 100; x <= 300; x += 50) 
+  return canvas
+
+  arrow(x, fixedY)
+ </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
